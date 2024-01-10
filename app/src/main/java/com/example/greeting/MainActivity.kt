@@ -23,14 +23,16 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+
+        setContentView(R.layout.activity_layout_prac2)
     }
 }
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
-            text = "Hello $name!",
-            modifier = modifier
+        text = "Hello $name!",
+        modifier = modifier
     )
 }
 

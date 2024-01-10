@@ -6,4 +6,49 @@
         android:layout_height="match_parent"
         tools:context=".layout_prac3">
 
+    <TextView
+            android:text="이름"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textNameLabel3"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="42dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="37dp" />
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:text="이름"
+            android:ems="10"
+            android:id="@+id/editTextName3"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="144dp" />
+
+    <TextView
+            android:text="주소"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textAddrLabel3"
+            tools:layout_editor_absoluteY="239dp"
+            tools:layout_editor_absoluteX="37dp" />
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:text="주소"
+            android:ems="10"
+            android:id="@+id/editTextAddr3"
+            tools:layout_editor_absoluteY="187dp"
+            tools:layout_editor_absoluteX="158dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
