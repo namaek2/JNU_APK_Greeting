@@ -50,11 +50,11 @@
                 android:layout_marginRight="30dp"
                 android:id="@+id/layoutID">
 
-            <ImageView
+            <!--ImageView
                     android:src="@tools:sample/avatars"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:id="@+id/user" />
+                    android:id="@+id/user" /-->
 
             <EditText
                     android:layout_width="wrap_content"
@@ -78,11 +78,11 @@
                 android:layout_marginRight="30dp"
                 android:layout_marginTop="40dp">
 
-            <ImageView
+            <!--ImageView
                     android:src="@tools:sample/avatars"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:id="@+id/pw" />
+                    android:id="@+id/pw" /-->
 
             <EditText
                     android:layout_width="wrap_content"

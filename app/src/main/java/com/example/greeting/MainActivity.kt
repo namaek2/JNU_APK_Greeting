@@ -1,45 +1,35 @@
 package com.example.greeting
 
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.greeting.ui.theme.GreetingTheme
+import android.widget.Button
+import android.widget.EditText
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            GreetingTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-                    Greeting("Android")
-                }
-            }
+
+        //activity_main_2.xml의 레이아웃 가져오기
+        setContentView(R.layout.activity_main_2)
+
+        //btn_StartActivity 버튼 가져오기
+        val sendButton = findViewById<Button>(R.id.btn_StartActivity)
+
+        //버튼 클릭시 이벤트 처리
+        sendButton.setOnClickListener {
+            //editText_Input 텍스트 박스 가져오기
+            val sendText = findViewById<EditText>(R.id.editText_Input)
+
+            //전송할 메시지 정의
+            val sendMessage = sendText.text.toString()
+
+            //전송할 메시지를 SubActivity로 전달
+            val sendIntent = Intent(this, SubActivity::class.java)
+            sendIntent.putExtra("message", sendMessage)
+
+            //SubActivity 실행
+            startActivity(sendIntent)
         }
-
-        setContentView(R.layout.activity_layout_prac2)
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    GreetingTheme {
-        Greeting("Android")
     }
 }
