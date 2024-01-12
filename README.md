@@ -8,6 +8,9 @@
 2. gradel의 local_properties파일에 api_key = "사용자 구글 맵 api 키" 추가
 
 ## Launch Screen
+![Screenshot_20240112_150015_Greeting](https://github.com/namaek2/JNU_APK_Greeting/assets/34965961/104c7495-2303-472d-947a-540818666060)
+![Screenshot_20240112_150005_Greeting](https://github.com/namaek2/JNU_APK_Greeting/assets/34965961/761f3d4a-f836-46cc-b13d-129eb3c0c66f)
+
 
 ## Source Codes
 ### layout
